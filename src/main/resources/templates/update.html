@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<h1>Update record</h1>
+<form action="/update" method="post">
+<input type="hidden" name="id" th:value="${travel.id}"><br> <br>
+            <label for="name"> Name:</label><br>
+
+            <input type="text" id="name" name="name" placeholder="Enter the name" th:value="${travel.name}" required><br><br>
+
+            <label for="countryname">Country:</label><br>
+            <input type="text" id="countryname" name="countryname" placeholder="Enter the country" th:value="${travel.countryname}" required><br><br>
+
+            <label for="description">Description:</label><br>
+            <input type="text" id="description" name="description" placeholder="Enter the description"  th:value="${travel.description}" required><br><br>
+
+            <label for="imagelink">Image Link:</label><br>
+            <input type="url" id="imagelink" name="imagelink" placeholder="Enter the image link"  th:value="${travel.imagelink}" required><br><br>
+
+            <label for="visited">Visited:</label><br>
+            <input type="radio" name="visited" value="visited" required>Visited
+            <input type="radio" name="visited" value="unVisited" required>UnVisited
+            <br><br>
+
+            <button type="submit">Add</button>
+</form>
+</div>
+</body>
+</html>

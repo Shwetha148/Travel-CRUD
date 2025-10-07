@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Travel Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        input, button {
+            margin: 8px 0;
+            padding: 8px;
+            width: 280px;
+        }
+        button {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        fieldset {
+            border: none;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Record</h1>
+        <form action="/insert" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter the name" required><br><br>
+
+            <label for="countryname">Country Name:</label><br>
+            <input type="text" id="countryname" name="countryname" placeholder="Enter the country name" required><br><br>
+
+            <label for="description">Description:</label><br>
+            <input type="text" id="description" name="description" placeholder="Enter the description" required><br><br>
+
+            <label for="imagelink">Image Link:</label><br>
+            <input type="url" id="imagelink" name="imagelink" placeholder="Enter the image link" required><br><br>
+
+            <label for="visited">Visited:</label><br>
+            <input type="radio" name="visited" value="visited" required>Visited
+            <input type="radio" name="visited" value="unVisited" required>UnVisited
+            <br><br>
+               
+            
+
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

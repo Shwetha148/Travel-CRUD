@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie CRUD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        a.button.fetch {
+            background-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TRAVEL_CRUD</h1>
+        <a href="/insert" class="button">Add Record</a>
+        <a href="/fetch" class="button fetch">Fetch Record</a>
+    </div>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        let msg = [[${message} ?: 'null']];
+        if (msg !== 'null') {
+            alert(msg);
+        }
+        /*]]>*/
+    </script>
+</body>
+</html>
